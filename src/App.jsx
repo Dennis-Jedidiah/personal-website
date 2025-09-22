@@ -1,6 +1,5 @@
-import { Analytics } from "@vercel/analytics/next"
 function App() {
-  <Analytics />
+
   return (
     <>
       <div className="Construction_sign">
