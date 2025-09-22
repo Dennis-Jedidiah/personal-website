@@ -1,10 +1,12 @@
-import { useState } from 'react'
-
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <h1>Hello World!</h1>
+    <>
+      <div className="Construction_sign">
+        <h1>Page Under Construction</h1>
+        <p id='subheading'>We're working hard to get this page up and running. Stay tuned!</p>
+      </div>
+    </>
   )
 }
 
