@@ -1,20 +1,20 @@
-*{
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   border: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Inter", Geneva, Verdana, sans-serif;
   scroll-behavior: smooth;
 }
-h1{
+h1 {
   font-size: 4rem;
 }
-#subheading{
+#subheading {
   font-size: 1.5rem;
   margin-top: 1rem;
   color: gray;
 }
-.Construction_sign{
+.Construction_sign {
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -25,21 +25,28 @@ h1{
   padding: 10%;
 }
 
-@media screen and (max-width: 768px) {
-  .Construction_sign{
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  text-align: left;
-  gap: 1rem;
-  padding: 10%;
+.zalando-sans-expanded {
+  font-family: "Zalando Sans Expanded", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
 }
-  h1{
+
+@media screen and (max-width: 768px) {
+  .Construction_sign {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+    gap: 1rem;
+    padding: 10%;
+  }
+  h1 {
     font-size: 2.5rem;
   }
-  #subheading{
+  #subheading {
     font-size: 1rem;
     margin-top: 0.5rem;
   }
