@@ -1,3 +1,5 @@
+import picture from "../assets/cool_selfie.jpeg";
+
 const AboutMe = () => {
   return (
     <div className="about-me">
@@ -10,6 +12,9 @@ const AboutMe = () => {
           find me gaming, reading, or planning the next hackathon project with
           friends.
         </p>
+      </div>
+      <div className="about-me-image">
+        <img src={picture} alt="A cool selfie" />
       </div>
     </div>
   );
