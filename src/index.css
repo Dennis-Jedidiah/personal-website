@@ -5,14 +5,43 @@
   border: 0;
   font-family: "Inter", Geneva, Verdana, sans-serif;
   scroll-behavior: smooth;
+  font-size: 18px;
+  font-weight: 300;
 }
 h1 {
   font-size: 4rem;
 }
+h2 {
+  font-size: 2.5rem;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* style ids */
 #subheading {
   font-size: 1.5rem;
   margin-top: 1rem;
   color: gray;
+}
+#hero_header {
+  font-size: 5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* style classes */
+.purple_header {
+  color: #7b79ac;
+}
+.purple_subheader {
+  color: #434069;
+}
+.zalando-sans-expanded {
+  font-family: "Zalando Sans Expanded", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
 }
 .Construction_sign {
   height: 100vh;
@@ -24,15 +53,84 @@ h1 {
   gap: 1rem;
   padding: 10%;
 }
-
-.zalando-sans-expanded {
-  font-family: "Zalando Sans Expanded", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 300;
-  font-style: normal;
+.hero {
+  height: 90vh;
+  background-color: #f8f2ea;
+  display: flex;
+  gap: 2rem;
+  flex-direction: row;
 }
-
+.hero_text_box {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 8%;
+  gap: 1.5rem;
+}
+.hero img {
+  height: 100%;
+  object-fit: cover;
+}
+.nav-links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-right: 5%;
+  gap: 2rem;
+  list-style: none;
+  color: black;
+}
+.navigation-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  height: fit-content;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0.8rem 1rem;
+  border-radius: 0px 0px 10px 10px;
+  background-color: #fafafa;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: border-radius 0.3s ease;
+}
+.navigation-bar.scrolled {
+  top: 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 10px 10px 10px 10px;
+  transition: border-radius 0.3s ease;
+}
+.about-me {
+  padding: 5%;
+  background-color: #f8f2ea;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+.about-me-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
 @media screen and (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  /* style ids */
+  #subheading {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+  }
+
+  /* style classes */
   .Construction_sign {
     height: 100vh;
     display: flex;
@@ -42,12 +140,5 @@ h1 {
     text-align: left;
     gap: 1rem;
     padding: 10%;
-  }
-  h1 {
-    font-size: 2.5rem;
-  }
-  #subheading {
-    font-size: 1rem;
-    margin-top: 0.5rem;
   }
 }
