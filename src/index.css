@@ -8,7 +8,7 @@
   font-size: 18px;
   font-weight: 300;
 }
-#root{
+#root {
   background-color: #f8f2ea;
 }
 h1 {
@@ -16,6 +16,9 @@ h1 {
 }
 h2 {
   font-size: 2.5rem;
+}
+h3 {
+  font-size: 1.5rem;
 }
 a {
   text-decoration: none;
@@ -109,8 +112,8 @@ a {
   transition: border-radius 0.3s ease;
 }
 .about-me {
-  margin-top: 5%;
-  padding: 0px 5%;
+  margin: 5% 0 5%;
+  padding: 0% 5% 0%;
   height: 80vh;
   background-color: #f8f2ea;
   display: flex;
@@ -122,7 +125,6 @@ a {
   flex: 1;
   height: 100%;
   max-width: 45%;
-
 }
 .about-me img {
   height: 100%;
@@ -138,6 +140,76 @@ a {
   justify-content: center;
   align-items: flex-start;
   gap: 1.5rem;
+}
+.projects {
+  padding: 5% 5% 5%;
+  background-color: #fafafa;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+#projects_grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 35vh 35vh;
+  gap: 0.5rem;
+}
+.project_card {
+  background-color: #83ab79;
+  color: #fafafa;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+.project_card_tall {
+  grid-row: span 2;
+}
+.project_card_wide {
+  grid-column: span 2;
+}
+.card_text {
+  display: none;
+}
+.project_card:hover{
+  background-color: red;
+  transition: background-color 0.3s ease;
+}
+/* .project_card:hover .card_text{
+  height: 100%;
+  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+} */
+#aws_card{
+  background-image: url('assets/AWS.jpg');
+  background-size: cover;
+  transition: background-image 0.3s ease;
+  /* background-position: top; */
+}
+#todo_card{
+  background-image: url('assets/todo_list.png');
+  background-size: cover;
+  transition: background-image 0.3s ease;
+  /* background-position: top; */
+}
+#schedule-inator_card{
+  background-image: url('assets/schedule-inator.png');
+  background-size: cover;
+  transition: background-image 0.3s ease;
+  /* background-position: top; */
+}
+#joke_api_card{
+  background-image: url('assets/jokegithub.png');
+  background-size: cover;
+  transition: background-image 0.3s ease;
+  /* background-position: top; */
 }
 @media screen and (max-width: 768px) {
   h1 {
