@@ -1,6 +1,25 @@
 import InputBar from "./InputBar";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    emailjs.init({publicKey:"drmXlNHR3x1JH_-nI"})
+    emailjs.sendForm(
+        "service_b8fu4my",
+        "template_cwl0gla",
+        e.target,
+      )
+      .then(
+        (result) => {
+          alert("Message sent successfully!");
+        },
+        (error) => {
+          alert(`Failed to send message, please try again.\nError: ${error.text}`);
+        }
+      );
+  };
+
   return (
     <div id="contact" className="contact-me">
       <div className="contact-me-text">
@@ -11,14 +30,16 @@ const Contact = () => {
           interesting or need help bringing an idea to life.
         </p>
       </div>
-      <form className="contact-form">
-        <InputBar placeholder="Your Name" islong={false} />
+      <form className="contact-form" id="contact-form" onSubmit={handleSubmit}>
+        <InputBar placeholder="Name" islong={false} />
 
-        <InputBar placeholder="Your Email" islong={false} />
+        <InputBar placeholder="Email" islong={false} isEmail={true}/>
 
-        <InputBar placeholder="Your Message" islong={true} />
+        <InputBar placeholder="Message" islong={true} />
 
-        <button className="submit-button" type="submit">Send</button>
+        <button className="submit-button" type="submit">
+          Send Message
+        </button>
       </form>
     </div>
   );

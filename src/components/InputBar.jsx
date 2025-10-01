@@ -1,6 +1,6 @@
-const InputBar = ({ placeholder, islong }) => {
+const InputBar = ({ placeholder, islong, isEmail }) => {
     return ( <div className={`input_bar ${islong ? "long" : ""}`}>
-        <input type="text" placeholder={placeholder} />
+        <input type={isEmail? 'email' : 'text'} name={placeholder} placeholder={placeholder} required/>
     </div> );
 }
  

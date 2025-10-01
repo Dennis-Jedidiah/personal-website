@@ -44,7 +44,7 @@ const Projects = () => {
         </div>
 
         <div className="project_card project_card_wide" id="aws_card">
-          <div className="card_text">
+          <a className="card_text" href="/AWS.jpg" target="_blank" rel="noopener noreferrer">
             <h3 className="project_title purple_subheader">
               AWS Cloud Practitioner
             </h3>
@@ -52,7 +52,7 @@ const Projects = () => {
               I achieved AWS Certified Cloud Practitioner status, demonstrating
               foundational knowledge of AWS Cloud concepts.
             </p>
-          </div>
+          </a>
         </div>
       </div>
     </div>
