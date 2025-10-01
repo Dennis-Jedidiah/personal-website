@@ -309,6 +309,17 @@ input {
   flex-direction: row;
   gap: 1rem;
 }
+.footer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 5% 5% 4%;
+}
+.footer p{
+  color: #524F7D90;
+}
 /* Responsive Design */
 @media screen and (max-width: 768px) {
   h1 {
