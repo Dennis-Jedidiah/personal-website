@@ -1,54 +1,46 @@
 const Projects = () => {
   return (
-    <div className="projects">
+    <div className="projects" id="projects">
       <h2 className="purple_subheader">Projects and Certificates</h2>
       <div id="projects_grid">
         <div className="project_card project_card_tall" id="joke_api_card">
-          <div className="card_text">
-            <h3 className="project_title purple_subheader">Personal Website</h3>
+          <a
+            className="card_text"
+            href="https://dennis-jedidiah.github.io/Alpine.JS_Joke-api/"
+          >
+            <h3 className="project_title purple_subheader">Joke API</h3>
             <p className="project_description">
-              This website was built using React and CSS. It showcases my skills
-              and projects in a clean and modern design.
+              This is an Alpine.js project that fetches and displays random
+              jokes from the JokeAPI with a clean, minimalist design. I built
+              this to learn Alpine.js and practice making API calls.
             </p>
-            <a
-              className="project_link"
-              href="https://github.com/johndoe/personal-website"
-            >
-              View Project
-            </a>
-          </div>
+          </a>
         </div>
 
         <div className="project_card" id="todo_card">
-          <div className="card_text">
-            <h3 className="project_title purple_subheader">Weather App</h3>
-            <p className="project_description">
-              A weather forecasting app that provides real-time weather updates
-              and forecasts using the OpenWeatherMap API.
-            </p>
-            <a
-              className="project_link"
-              href="https://github.com/johndoe/weather-app"
-            >
-              View Project
-            </a>
-          </div>
-        </div>
-
-        <div className="project_card" id="schedule-inator_card">
-          <div className="card_text">
+          <a className="card_text" href="https://to-do-list-7r1l.vercel.app/">
             <h3 className="project_title purple_subheader">To-Do List</h3>
             <p className="project_description">
               A simple and intuitive to-do list application that helps users
-              manage their tasks efficiently.
+              manage their tasks efficiently. I built this to learn CRUD
+              operations.
             </p>
-            <a
-              className="project_link"
-              href="https://github.com/johndoe/todo-list"
-            >
-              View Project
-            </a>
-          </div>
+          </a>
+        </div>
+
+        <div className="project_card" id="schedule-inator_card">
+          <a
+            className="card_text"
+            href="https://github.com/Dennis-Jedidiah/schedule-inator-2"
+          >
+            <h3 className="project_title purple_subheader">Schedule-Inator</h3>
+            <p className="project_description">
+              A simple and intuitive scheduling application that helps OTU
+              students manage their class schedules efficiently. I built this
+              using Python to practice Regex, file handling, and console
+              applications.
+            </p>
+          </a>
         </div>
 
         <div className="project_card project_card_wide" id="aws_card">
@@ -57,15 +49,9 @@ const Projects = () => {
               AWS Cloud Practitioner
             </h3>
             <p className="project_description">
-              Achieved AWS Certified Cloud Practitioner status, demonstrating
+              I achieved AWS Certified Cloud Practitioner status, demonstrating
               foundational knowledge of AWS Cloud concepts.
             </p>
-            <a
-              className="project_link"
-              href="https://aws.amazon.com/certification/certified-cloud-practitioner/"
-            >
-              View Certificate
-            </a>
           </div>
         </div>
       </div>

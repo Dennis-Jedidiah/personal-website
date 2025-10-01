@@ -8,6 +8,9 @@
   font-size: 18px;
   font-weight: 300;
 }
+::placeholder {
+  background-color: transparent;
+}
 #root {
   background-color: #f8f2ea;
 }
@@ -23,6 +26,13 @@ h3 {
 a {
   text-decoration: none;
   color: inherit;
+}
+input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  width: 100%;
+  height: 100%;
 }
 
 /* style ids */
@@ -155,17 +165,14 @@ a {
   gap: 0.5rem;
 }
 .project_card {
+  position: relative;
   background-color: #83ab79;
   color: #fafafa;
   border-radius: 10px;
   padding: 1rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  transition: background-color 0.3s ease;
+  /* transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: background-color 0.3s ease; */
 }
 .project_card_tall {
   grid-row: span 2;
@@ -174,43 +181,102 @@ a {
   grid-column: span 2;
 }
 .card_text {
+  position: relative;
+  z-index: 2;
   display: none;
 }
-.project_card:hover{
-  background-color: red;
+.project_card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  z-index: 0;
+}
+.project_card:hover::before {
+  opacity: 0.1;
+}
+.project_card:hover {
   transition: background-color 0.3s ease;
 }
-/* .project_card:hover .card_text{
+.project_card:hover .card_text {
   height: 100%;
   display: block;
   display: flex;
   flex-direction: column;
   justify-content: center;
-} */
-#aws_card{
-  background-image: url('assets/AWS.jpg');
-  background-size: cover;
-  transition: background-image 0.3s ease;
-  /* background-position: top; */
+  gap: 1rem;
 }
-#todo_card{
-  background-image: url('assets/todo_list.png');
-  background-size: cover;
-  transition: background-image 0.3s ease;
-  /* background-position: top; */
+#aws_card::before {
+  background-image: url("assets/AWS.jpg");
 }
-#schedule-inator_card{
-  background-image: url('assets/schedule-inator.png');
-  background-size: cover;
-  transition: background-image 0.3s ease;
-  /* background-position: top; */
+#todo_card::before {
+  background-image: url("assets/todo_list.png");
 }
-#joke_api_card{
-  background-image: url('assets/jokegithub.png');
-  background-size: cover;
-  transition: background-image 0.3s ease;
-  /* background-position: top; */
+#schedule-inator_card::before {
+  background-image: url("assets/schedule-inator.png");
 }
+#joke_api_card::before {
+  background-image: url("assets/jokegithub.png");
+}
+.contact-me {
+  padding: 5% 5% 5%;
+  background-color: #f8f2ea;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.contact-me-text {
+  flex: 1;
+  max-width: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+.contact-form {
+  flex: 1;
+  max-width: 45%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  height: 80vh;
+  padding: 4% 2% 4%;
+  background-color: #ffffff;
+  border-radius: 20px;
+}
+.input_bar {
+  width: 100%;
+  height: fit-content;
+  background-color: #f5f5f5;
+  border-radius: 22px;
+  padding: 1rem;
+}
+.input_bar.long {
+  height: 100%;
+}
+.submit-button {
+  background-color: #1C1B23;
+  color: white;
+  border: 2px solid #1C1B23;
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
+}
+.submit-button:hover {
+  color: #1C1B23;
+  border: 2px solid #1C1B23;
+  background-color: transparent;
+  transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
+}
+
+/* Responsive Design */
 @media screen and (max-width: 768px) {
   h1 {
     font-size: 2.5rem;

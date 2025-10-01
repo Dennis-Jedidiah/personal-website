@@ -2,7 +2,7 @@ import picture from "../assets/cool_selfie.jpeg";
 
 const AboutMe = () => {
   return (
-    <div className="about-me">
+    <div className="about-me" id="about_me">
       <div className="about-me-text">
         <h2 className="purple_subheader">About Me</h2>
         <p>
