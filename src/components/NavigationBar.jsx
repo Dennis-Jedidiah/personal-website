@@ -33,10 +33,10 @@ const NavigationBar = () => {
           <a href="#projects">Projects</a>
         </li>
         <li>
-          <a href="#skills">Skills</a>
+          <a href="#contact">Contact</a>
         </li>
         <li>
-          <a href="#contact">Contact</a>
+          <a href="#skills">Skills</a>
         </li>
       </ul>
     </nav>
